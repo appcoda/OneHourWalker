@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TimerViewController" customModule="OneHourWalker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnF-fa-9lO" customClass="CustomView" customModule="OneHourWalker" customModuleProvider="target">
+                                <rect key="frame" x="169" y="79" width="263" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwP-JB-PfC">
+                                        <rect key="frame" x="18" y="8" width="226" height="69"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="53"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iwP-JB-PfC" secondAttribute="bottom" constant="8" id="21v-TW-BIE"/>
+                                    <constraint firstItem="iwP-JB-PfC" firstAttribute="top" secondItem="bnF-fa-9lO" secondAttribute="top" constant="8" id="8fG-kI-vYc"/>
+                                    <constraint firstItem="iwP-JB-PfC" firstAttribute="leading" secondItem="bnF-fa-9lO" secondAttribute="leading" constant="18" id="ICj-1i-4Ps"/>
+                                    <constraint firstAttribute="trailing" secondItem="iwP-JB-PfC" secondAttribute="trailing" constant="19" id="gvi-GU-1FW"/>
+                                    <constraint firstAttribute="width" constant="263" id="hkh-eu-mfh"/>
+                                    <constraint firstAttribute="height" constant="85" id="hxo-2D-oNv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 Miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjr-Zl-GdU">
+                                <rect key="frame" x="169" y="172" width="263" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="YoB-4G-FEJ"/>
+                                    <constraint firstAttribute="width" constant="263" id="wxA-Z8-LzB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-Uh-lDt" customClass="CustomButton" customModule="OneHourWalker" customModuleProvider="target">
+                                <rect key="frame" x="244" y="229" width="113" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Kxu-EC-m3s"/>
+                                    <constraint firstAttribute="width" constant="113" id="n1V-zn-AqD"/>
+                                </constraints>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9P-Pj-tdv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XY-eo-Awp" customClass="CustomButton" customModule="OneHourWalker" customModuleProvider="target">
+                                <rect key="frame" x="244" y="285" width="113" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Aqf-p3-qPc"/>
+                                    <constraint firstAttribute="width" constant="113" id="mGi-Jg-9WH"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZp-n8-Zej"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cv-9b-rij" customClass="CustomButton" customModule="OneHourWalker" customModuleProvider="target">
+                                <rect key="frame" x="244" y="341" width="113" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="CZh-lw-A6j"/>
+                                    <constraint firstAttribute="height" constant="48" id="wmM-1H-KY3"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zra-tf-DVZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXB-er-Qve">
+                                <rect key="frame" x="20" y="397" width="560" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="x32-eN-bwh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yjr-Zl-GdU" firstAttribute="top" secondItem="bnF-fa-9lO" secondAttribute="bottom" constant="8" id="E46-Fx-3kE"/>
+                            <constraint firstItem="dTg-Uh-lDt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSQ-Rx-Lb4"/>
+                            <constraint firstItem="gXB-er-Qve" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Li5-hb-KBF"/>
+                            <constraint firstItem="6XY-eo-Awp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U58-nQ-mGh"/>
+                            <constraint firstItem="dTg-Uh-lDt" firstAttribute="top" secondItem="yjr-Zl-GdU" secondAttribute="bottom" constant="8" id="agZ-yS-3B3"/>
+                            <constraint firstItem="yjr-Zl-GdU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d8o-ZU-pPE"/>
+                            <constraint firstItem="4cv-9b-rij" firstAttribute="top" secondItem="6XY-eo-Awp" secondAttribute="bottom" constant="8" id="drx-ve-KSh"/>
+                            <constraint firstItem="gXB-er-Qve" firstAttribute="top" secondItem="4cv-9b-rij" secondAttribute="bottom" constant="8" id="jnb-t0-Aal"/>
+                            <constraint firstItem="gXB-er-Qve" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="myS-av-uAl"/>
+                            <constraint firstItem="6XY-eo-Awp" firstAttribute="top" secondItem="dTg-Uh-lDt" secondAttribute="bottom" constant="8" id="qVa-9w-DU5"/>
+                            <constraint firstItem="4cv-9b-rij" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qk0-lH-AQE"/>
+                            <constraint firstItem="bnF-fa-9lO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="wBm-8w-wal"/>
+                            <constraint firstItem="bnF-fa-9lO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xF7-S2-ssP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="gXB-er-Qve" id="1IK-Mz-rGW"/>
+                        <outlet property="milesLabel" destination="yjr-Zl-GdU" id="VX2-5F-r3M"/>
+                        <outlet property="timerLabel" destination="iwP-JB-PfC" id="cWb-6c-RXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="507"/>
+        </scene>
+    </scenes>
+</document>
